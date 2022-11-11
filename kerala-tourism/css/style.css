@@ -4,3 +4,28 @@ body{
 i{
     color:rgb(27, 83, 118) !important;
 }
+/* .collapse ul li:hover{
+    
+} */
+.collapse ul li a{
+    color:black !important;
+}
+.collapse ul li a:hover{
+    color:rgb(37, 35, 139) !important;
+}
+.carousel-item{
+    height:91.2vh;
+    background-size: cover;
+}
+.item2 img{
+    transform: translateY(-300px);
+}
+.item3 img{
+    transform: translateY(-730px);
+}
+.item4 img{
+    transform: translateY(-200px);
+}
+.item5 img{
+    transform: translateY(00px);
+}
