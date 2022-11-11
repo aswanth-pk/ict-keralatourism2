@@ -1,5 +1,5 @@
 body{
-    background-color: teal !important;
+    background-color: rgb(198, 202, 202) !important;
 }
 i{
     color:rgb(27, 83, 118) !important;
@@ -28,4 +28,7 @@ i{
 }
 .item5 img{
     transform: translateY(00px);
+}
+.item7 img{
+    transform: translateY(-200px);
 }

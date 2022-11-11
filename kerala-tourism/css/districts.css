@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(198, 202, 202) !important;
+}
+i{
+    color:rgb(27, 83, 118) !important;
+}
+.collapse ul li a{
+    color:black !important;
+}
+.collapse ul li a:hover{
+    color:rgb(37, 35, 139) !important;
+}
+
+/*  */
+section{
+    margin:100px;
+}
+.card{
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card img{
+    height:200px !important;
+}
+.card-btn{
+    border:none;
+    background-color: rgb(255, 255, 255) !important;
+    color:rgb(27, 83, 118) !important;
+}
+
+/* .last1{
+    background-color: rebeccapurple;
+    width: 100px;
+}
+.last2{
+    background-color: aquamarine;
+} */
