@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Kerala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <!-- external css -->
+        <link rel="stylesheet" href="css/form.css">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-md navbar-light bg-light">
+
+        <!-- Navbar wrapper container div -->
+        <div class="container">
+            <!-- Logo Image -->
+            <a href="index.html" class="navbar-left"><img src="images/kerala-logo.png" height="50px"></a>
+
+            <!-- Hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navbar menu container -->
+
+            <div class="collapse navbar-collapse justify-content-end " id = "navMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item  pe-4 ms-auto  me-auto"><a href="districts.html" class="nav-link">Districts</a></li>
+                    <li class="nav-item  pe-4 ms-auto  me-auto"><a href="#" class="nav-link">Plan your Trip</a></li>
+                    <li class="nav-item  pe-4 ms-auto  me-auto"><a href="#" class="nav-link">Things to do</a></li>
+
+                    <li class="nav-item  pe-4 ms-auto  me-auto"><a href="#" class="nav-link"><i class="fa-solid fa-map-location-dot fa-lg"></i></a></li>
+
+                    <li class="nav-item  pe-4 ms-auto  me-auto"><a href="form.html" class="nav-link"><i class="fa-regular fa-user fa-lg"></i></a></li>
+
+                    <li class="nav-item  pe-4 ms-auto  me-auto"><a href="" class="nav-link"><i class="fas fa-magnifying-glass fa-lg"></i></a></li>
+                </ul>
+            </div>
+            <!-- navbar menu container end -->
+
+        </div>
+        <!-- Navbar wrapper end -->
+    </nav>
+    <!-- nav end -->
+    <div class="form-container">
+        <form action="userhome.html">
+            <div class="form-input-container signup-form active" id = "signup-form">
+                <div class="signup-desc desc">
+                    <h2>SIGN UP</h2>
+                    <p>Creating an account lets you save your favourite destinations and experiences.</p>
+                </div>
+                
+                <div class="input0 input-set">
+                    <label for="username">Username</label>
+                    <input type="text" id="uname">
+                    <p class="username-warning warning">Minimum 4 characters</p>
+                </div>
+                <div class="inputPhone input-set">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                            <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> -->
+                    <p class="phone-warning warning"></p>
+                </div>
+                <div class="input1 input-set">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email">
+                    <p class="signup-mail-warning warning"></p>
+                </div>
+                <div class="input2 input-set">
+                    <label for="password"> Password</label>
+                    <input type="password" id="password">
+                    <p class="signup-password-warning warning"></p>
+                    <div class="strength-meter hidden" id="strength-meter"></div>
+                    <ul class="warning warning-list hidden">
+                        <li id = "pass-length">password must contain atleast 8 characters</li>
+                        <li id = "pass-num">password must contain atleast 1 number</li>
+                        <li id = "pass-upper">password must contain atleast 1 uppercase letter</li>
+                        <li id = "pass-lower">password must contain atleast 1 lowercase letter</li>
+                        <li id = "pass-alpha">password must contain atleast 1 alphanumeric character</li>
+                        <li>add more characters for stronger password</li>
+                    </ul>
+                </div>
+                
+                <div class="input3 input-set">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password">
+                    <p class="confirm-password-warning warning"></p>
+                </div>  
+                <input type ="submit" class = "submit signup-submit" id = "signup-submit" value = "Signup" onclick="return totalValidate()">   <!-- Sign Up</input> -->
+                <div class="control-buttons">
+                    <button id="login-btn" class = "switch-button">Have an account? Login.</button>
+                </div>       
+            </div>
+            
+        </form>
+
+        <!-- login form -->
+        <form action="#">
+            <div class="form-input-container login-form" id = "login-form">
+                <div class="login-desc desc">
+                    <h2>LOGIN</h2>
+                    <p>Login to your account to see your favorite locations and events.</p>
+                </div> 
+                <div class="input1 input-set">
+                    <label for="email-log">Email address</label>
+                    <input type="email" id="email-log">
+                    <p class="login-mail-warning warning"></p>
+                </div>
+                <div class="input2 input-set">
+                    <label for="password-log">Password</label>
+                    <input type="password" id="password-log">
+                    <p class="login-password-warning warning"></p>
+                </div>
+                <input type ="submit" class = "submit login-submit" id = "login-submit" value = "Login">  <!--Login</button>-->
+
+                <div class="control-buttons">
+                    <button id="signup-btn" class = "switch-button">Don't have an account? Sign Up.</button>
+                </div>
+                
+            </div>  
+        </form>
+        
+    </div>
+
+    
+    <script src="javascript/form.js"></script>
+    
+</body>
+</html>

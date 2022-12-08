@@ -14,21 +14,204 @@ i{
     color:rgb(37, 35, 139) !important;
 }
 .carousel-item{
-    height:91.2vh;
+    max-height:91.2vh;
+    /* height: 100vh; */
     background-size: cover;
+    background-color: red;
 }
-.item2 img{
-    transform: translateY(-300px);
+
+
+/* things todo section */
+#things-todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: hsl(207, 100%, 96%);
+    height: 100%;
+    margin: 50px 0;
+    padding: 50px 0;
 }
-.item3 img{
-    transform: translateY(-730px);
+/* .things-grid-container{
+    width: 80%;
+    background-color: green;
+    display: grid;
+    grid-template-columns: 300px 200px 200px;
+    grid-gap: 2px;
+} */
+.grid-item{
+    margin: 5px;
+    position: relative;
 }
-.item4 img{
-    transform: translateY(-200px);
+.grid-item p{
+    background-color: rgba(76, 73, 73, 0.587);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; */
 }
-.item5 img{
-    transform: translateY(00px);
+.todo-row1{
+    display: flex;
 }
-.item7 img{
-    transform: translateY(-200px);
+.todo-row2{
+    display: flex;
+}
+.grid-item{
+    height: 250px;
+    width: 400px;
+   
+}
+/* grid items set background image */
+.todo1{
+    background: url(../images/things-todo/kathakali.jpg);
+}
+.todo2{
+    background: url(../images/things-todo/camping.jpg);
+}
+.todo3{
+    background: url(../images/things-todo/parasailing.jpg);
+}
+.todo4{
+    background: url(../images/things-todo/city-ride.jpg);
+}
+.todo5{
+    background: url(../images/things-todo/trekking.jpg);
+}
+.todo6{
+    background: url(../images/things-todo/scubadive.jpg);
+}
+.image-card{
+    height:200px;
+    overflow: hidden;
+}
+
+/* footer */
+footer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+#foot-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 50%;
+    padding-top: 40px;
+    height: 100%;
+}
+footer div img{
+    max-width: 70px;
+    max-height: 75px;
+    padding: 0 10px;
+}
+footer a{
+    text-decoration: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: hsl(210, 38%, 56%);
+}
+::-webkit-scrollbar-thumb{
+    background: hsl(210, 82%, 18%);
+}
+/* carouse media query */
+
+@media screen and (min-width:1200px) {
+    .item2 img{
+        transform: translateY(-300px);
+    }
+    .item3 img{
+        transform: translateY(-730px);
+    }
+    .item4 img{
+        transform: translateY(-200px);
+    }
+    .item5 img{
+        transform: translateY(00px);
+    }
+    .item7 img{
+        transform: translateY(-200px);
+    }
+}
+@media screen and (max-width:1200px) {
+    .grid-item{
+        height: 250px;
+        width: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media only screen and (max-width:1111px){
+    /* .carousel-caption{
+        transform: translateY(-200px);
+        position: fixed;
+
+    }
+    .carousel-item img{
+        min-height: 600px;
+    } */
+    .grid-item{
+        height: 150px;
+        width: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: center; */
+    }
+    #foot-text-container{
+        line-height: 100%;
+       
+    }
+}
+@media only screen and (max-width:771px){
+    /* .carousel-inner{
+        position:relative;
+    } 
+    .carousel-item img{
+        transform: translateY(0px);
+        bottom: 0;
+    } */
+
+    .grid-item{
+        height: 120px;
+        width: 180px;
+        /* background-size: cover;
+        background-repeat: no-repeat; */
+    }
+}
+@media  only screen and (max-width:575px) {
+    
+    .todo-row1{
+        flex-direction: column;
+    }
+    .todo-row2{
+        flex-direction: column;
+    }
+    .grid-item{
+        height: 200px;
+        width: 280px;
+        /* background-size: cover;
+        background-repeat: no-repeat; */
+    }
+    #foot-text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 100%;
+        padding-top: 40px;
+        height: 100%;
+    }
 }
